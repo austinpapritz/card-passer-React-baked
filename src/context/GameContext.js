@@ -42,12 +42,20 @@ const GameProvider = ({ children }) => {
   return (
     <GameContext.Provider
       value={{
+        deck,
+        setDeck,
         playerOneHand,
         setPlayerOneHand,
         playerTwoHand,
         setPlayerTwoHand,
         playerThreeHand,
         setPlayerThreeHand,
+        from,
+        setFrom,
+        to,
+        setTo,
+        findCardIndex,
+        passCard,
       }}
     >
       {children}
