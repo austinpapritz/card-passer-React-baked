@@ -1,12 +1,17 @@
 import { createContext, useState } from 'react';
+import initialCards from '../cards-data.js';
 
 const GameContext = createContext();
 
 const GameProvider = ({ children }) => {
   //useStates
+  const [deck, setDeck] = useState(initialCards);
+  const [selectedCard, setSelectedCard] = useState();
   const [playerOneHand, setPlayerOneHand] = useState([]);
   const [playerTwoHand, setPlayerTwoHand] = useState([]);
   const [playerThreeHand, setPlayerThreeHand] = useState([]);
+  const [from, setFrom] = useState('deck');
+  const [to, setTo] = useState(1);
 
   function findCardIndex(value, suit, cards) {
     return cards.findIndex((card) => card.value === value && card.suit === suit);
