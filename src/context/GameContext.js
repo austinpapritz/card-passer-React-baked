@@ -44,6 +44,8 @@ const GameProvider = ({ children }) => {
       value={{
         deck,
         setDeck,
+        selectedCard,
+        setSelectedCard,
         playerOneHand,
         setPlayerOneHand,
         playerTwoHand,
